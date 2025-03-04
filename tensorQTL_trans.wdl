@@ -42,7 +42,7 @@ task tensorqtl_trans {
     }
 
     output {
-        File output_data =  "${prefix}.trans_qtl_pairs.txt.gz"
+        File data =  "${prefix}.trans_qtl_pairs.txt.gz"
     }    
     meta {
         author: "Francois Aguet"
