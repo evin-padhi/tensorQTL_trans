@@ -10,7 +10,6 @@ task tensorqtl_trans {
 
     Float maf_threshold
     Float? fdr
-    Int? max_effects
 
     Int memory
     Int disk_space
@@ -25,6 +24,7 @@ task tensorqtl_trans {
             $plink_base ${phenotype_bed} ${prefix} \
             --mode trans \
             --covariates ${covariates} \
+            --output_text \ 
             ${"--fdr " + fdr} \
             ${"--maf_threshold " + maf_threshold} 
     }
@@ -42,8 +42,7 @@ task tensorqtl_trans {
     }
 
     output {
-        Array[File] chr_parquet=glob("${prefix}.parquet")
-        File log=glob("${prefix}.log")[0]
+        File output="${prefix}.trans_qtl_pairs.txt.gz"
     }    
     meta {
         author: "Francois Aguet"
