@@ -24,7 +24,6 @@ task tensorqtl_trans {
             $plink_base ${phenotype_bed} ${prefix} \
             --mode trans \
             --covariates ${covariates} \
-            --output_text \ 
             ${"--fdr " + fdr} \
             ${"--maf_threshold " + maf_threshold} 
     }
@@ -42,7 +41,7 @@ task tensorqtl_trans {
     }
 
     output {
-        File qtls =  "${prefix}.trans_qtl_pairs.txt.gz"
+        File qtls =  "${prefix}.trans_qtl_pairs.parquet"
     }    
     meta {
         author: "Francois Aguet"
