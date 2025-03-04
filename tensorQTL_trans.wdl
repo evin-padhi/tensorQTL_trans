@@ -42,8 +42,8 @@ task tensorqtl_trans {
     }
 
     output {
-        Array[File] chr_parquet=glob("${prefix}*.trans.parquet")
-        File log=glob("${prefix}*.trans.log")[0]
+        Array[File] chr_parquet=glob("${prefix}.parquet")
+        File log=glob("${prefix}.log")[0]
     }    
     meta {
         author: "Francois Aguet"
