@@ -51,6 +51,6 @@ task tensorqtl_trans {
     }
 }
 
-workflow tensorqtl_cis_susie_workflow {
-    call tensorqtl_cis_susie
+workflow tensorqtl_trans_workflow {
+    call tensorqtl_trans
 }
