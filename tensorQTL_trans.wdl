@@ -7,7 +7,6 @@ task tensorqtl_trans {
     File phenotype_bed
     File covariates
     String prefix
-    File cis_output
 
     Float maf_threshold
     Float? fdr
