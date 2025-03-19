@@ -43,7 +43,7 @@ task tensorqtl_trans {
 
     output {
         #File qtls =  "${prefix}.trans_qtl_pairs.parquet"
-        File qtls =  "${prefix}.trans_qtl_pval.parquet"
+        File qtls = "${prefix}.trans_qtl_pval.parquet"
 
     }    
     meta {
