@@ -24,6 +24,7 @@ task tensorqtl_trans {
             $plink_base ${phenotype_bed} ${prefix} \
             --mode trans \
             --covariates ${covariates} \
+            --return_dense \
             ${"--fdr " + fdr} \
             ${"--maf_threshold " + maf_threshold} 
     }
